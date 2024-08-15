@@ -95,11 +95,16 @@ const WalletStatement = () => {
         </div>
       </div>
       <hr />
-      <div className="flex flex-row justify-between p-4 mb-5">
-        <div className="text-xl text-gray-600" style={{ width: "20%" }}>
+      <div className="flex flex-row justify-between p-4 mb-2">
+        <div className="text-xl text-gray-600" style={{ width: "25%" }}>
           LIFE Cash & Credits
         </div>
-        <div className="text-xl text-gray-600">Transaction</div>
+        <div
+          className="text-xl text-gray-600 text-left"
+          style={{ width: "25%" }}
+        >
+          Transaction
+        </div>
         <div className="text-xl text-gray-600">Amount</div>
       </div>
       <div>

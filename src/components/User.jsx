@@ -3,7 +3,7 @@ import fiveStarsImage from "../assets/ace_level_5.png";
 const User = ({ imgSrc, name, level }) => {
   return (
     <div
-      className="flex flex-col ml-4 rounded-lg bg-white border border-gray-300 pt-10"
+      className="flex flex-col ml-4 rounded-lg bg-white border border-gray-300 pt-8"
       style={{ width: "100%", height: "400px" }}
     >
       <div className="flex flex-col items-center justify-center text-center ">
@@ -11,7 +11,7 @@ const User = ({ imgSrc, name, level }) => {
           src={imgSrc}
           alt="Profile Picture"
           className="rounded-full border border-blue-500"
-          style={{ borderWidth: "2px" }}
+          style={{ borderWidth: "4px" }}
           height={"128px"}
           width={"128px"}
         ></img>
@@ -27,7 +27,7 @@ const User = ({ imgSrc, name, level }) => {
             </div>
           </div>
         ) : (
-          <h2>UserImage</h2>
+          <h2>Stars Image</h2>
         )}
         {/* Replace with avatar */}
         <div style={{ width: "8%" }}>

@@ -1,6 +1,9 @@
 const MidComponent = ({ imgSrc, text, componentText, buttonText }) => {
   return (
-    <div className="flex bg-white" style={{ width: "30%", paddingRight: "4%" }}>
+    <div
+      className="flex bg-white"
+      style={{ width: "100%", paddingRight: "4%" }}
+    >
       <img src={imgSrc}></img>
       <div
         className="text-gray-600 text-4xl"
