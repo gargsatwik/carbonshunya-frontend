@@ -1,48 +1,79 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import CashTransactionComponent from "./CashTransactionComponent";
 
+const data = [
+  {
+    id: 1,
+    transactionDetails: "Vistara",
+    walletType: "Cash",
+    amount: 364,
+  },
+  {
+    id: 2,
+    walletType: "Credits",
+    transactionDetails: "Tata Power",
+    amount: 364,
+  },
+  {
+    id: 3,
+    walletType: "Cash",
+    transactionDetails: "Zomato",
+    amount: 257,
+  },
+  {
+    id: 4,
+    walletType: "Cash",
+    transactionDetails: "Uber",
+    amount: 143,
+  },
+];
+
 const WalletStatement = () => {
-  const [walletData, setWalletData] = useState([]);
+  // const [walletData, setWalletData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchWalletData = async () => {
-      try {
-        const cashResponse = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/wallet/history`,
-          {
-            headers: {
-              authToken: localStorage.getItem("authToken"),
-            },
-            params: {
-              walletType: "CASH",
-            },
-          }
-        );
-        const creditsResponse = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/wallet/history`,
-          {
-            headers: {
-              authToken: localStorage.getItem("authToken"),
-            },
-            params: {
-              walletType: "CREDITS",
-            },
-          }
-        );
-
-        setWalletData([...cashResponse.data, ...creditsResponse.data]);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchWalletData();
+    setLoading(true);
+    setError(null);
   }, []);
+
+  // useEffect(() => {
+  //   const fetchWalletData = async () => {
+  //     try {
+  //       const cashResponse = await axios.get(
+  //         `${import.meta.env.VITE_BACKEND_URL}/wallet/history`,
+  //         {
+  //           headers: {
+  //             authToken: localStorage.getItem("authToken"),
+  //           },
+  //           params: {
+  //             walletType: "CASH",
+  //           },
+  //         }
+  //       );
+  //       const creditsResponse = await axios.get(
+  //         `${import.meta.env.VITE_BACKEND_URL}/wallet/history`,
+  //         {
+  //           headers: {
+  //             authToken: localStorage.getItem("authToken"),
+  //           },
+  //           params: {
+  //             walletType: "CREDITS",
+  //           },
+  //         }
+  //       );
+
+  //       setWalletData([...cashResponse.data, ...creditsResponse.data]);
+  //     } catch (err) {
+  //       setError(err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchWalletData();
+  // }, []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -70,8 +101,12 @@ const WalletStatement = () => {
         <div className="text-xl text-gray-600">Amount</div>
       </div>
       <div>
-        {walletData.map((item, index) => (
-          <CashTransactionComponent transactionDetails={item} amount={index} />
+        {data.map((item, index) => (
+          <CashTransactionComponent
+            transactionDetails={item.transactionDetails}
+            amount={item.amount}
+            key={index}
+          />
         ))}
       </div>
     </div>

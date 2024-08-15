@@ -1,4 +1,4 @@
-const MidComponent = ({ imgSrc, text, componentText, onClick, buttonText }) => {
+const MidComponent = ({ imgSrc, text, componentText, buttonText }) => {
   return (
     <div className="flex" style={{ width: "30%", paddingRight: "4%" }}>
       <img src={imgSrc}></img>

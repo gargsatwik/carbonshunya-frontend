@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
 import Life from "./LifeComponent";
-import axios from "axios";
 import lifeCashImage from "../assets/ic_life_cash.png";
 import lifeCreditsImage from "../assets/ic_life_credits.png";
 import footComponentImage from "../assets/img_how_green.jpg";
@@ -16,32 +14,32 @@ import MidComponent from "./MidComponent";
 import OffsetsComponents from "./OffsetsComponent";
 import User from "./User";
 import WalletStatement from "./WalletStatement";
-import LeadersComponent from "./leadersComponent";
+import LeadersComponent from "./LeadersComponent";
 import OffsetStatement from "./OffsetStatementComponent";
 
-const userDetails = async (authToken) => {
-  const response = await axios.get(`http://localhost:5173/user/`, {
-    headers: {
-      Authorization: `Bearer ${authToken}`,
-    },
-  });
-  return response.data;
-};
+// const userDetails = async (authToken) => {
+//   const response = await axios.get(`http://localhost:5173/user/`, {
+//     headers: {
+//       Authorization: `Bearer ${authToken}`,
+//     },
+//   });
+//   return response.data;
+// };
 
 const Home = () => {
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
-    const fetchUserDetails = async () => {
-      try {
-        const data = await userDetails("sample-token");
-        setUserData(data);
-      } catch (error) {
-        console.error("Failed to fetch user details:", error);
-      }
-    };
-    fetchUserDetails();
-  }, []);
+  // useEffect(() => {
+  //   const fetchUserDetails = async () => {
+  //     try {
+  //       const data = await userDetails("sample-token");
+  //       setUserData(data);
+  //     } catch (error) {
+  //       console.error("Failed to fetch user details:", error);
+  //     }
+  //   };
+  //   fetchUserDetails();
+  // }, []);
 
   return (
     <>
