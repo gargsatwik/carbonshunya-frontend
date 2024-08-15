@@ -1,7 +1,7 @@
 const SideComponent = ({ imgSrc, title, subtitle, buttonText, onClick }) => {
   return (
     <div
-      className="flex flex-col items-center justify-center text-center p-4 h-full bg-white"
+      className="flex flex-col items-center justify-center text-center p-4 h-full bg-white border border-gray-300 rounded-lg"
       style={{ width: "100%", borderRadius: "8px", height: "100%" }}
     >
       <img

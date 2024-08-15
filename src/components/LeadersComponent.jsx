@@ -68,7 +68,7 @@ const UserComponent = ({ imgSrc, name, stars, emission, rank }) => {
 
 const LeadersComponent = ({ date }) => {
   return (
-    <div className="p-4 text-gray-600 bg-white">
+    <div className="p-8 text-gray-600 bg-white border border-gray-300 rounded-md">
       <div className="flex justify-between mb-6">
         <div className="text-gray-600 text-4xl">LIFEstyle Leaders</div>
         <div>{date}</div>

@@ -1,7 +1,7 @@
 const Life = ({ title, imgSrc, content }) => {
   return (
-    <div className="flex flex-row mr-10 bg-white">
-      <img src={imgSrc} alt={title} className="h-32 w-32 mr-8 ml-8" />
+    <div className="flex flex-row pr-10 bg-white border border-gray-300 rounded-lg">
+      <img src={imgSrc} alt={title} className="h-28 w-28 mr-8 ml-8" />
       <div className="flex flex-col items-center justify-center">
         <div className="text-xl text-gray-600">{title}</div>
         {title === "LIFE Cash" ? (

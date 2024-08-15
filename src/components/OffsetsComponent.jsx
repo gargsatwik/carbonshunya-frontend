@@ -2,17 +2,17 @@ import offsetImage from "../assets/ic_offset_bought.png";
 
 const OffsetsComponents = ({ imgSrc1, imgSrc2, value }) => {
   return (
-    <div className="flex flex-col items-center justify-center text-center p-4 bg-white">
-      <div className="flex flew-row p-4">
+    <div className="flex flex-col items-center justify-center text-center p-2 bg-white border border-gray-300 rounded-lg">
+      <div className="flex flew-row p-2">
         <img
           src={offsetImage}
           alt="Offset Image"
           className="m-2"
-          style={{ height: "100px" }}
+          style={{ height: "96px", width: "15%" }}
         ></img>
-        <div style={{ width: "30%" }}>
-          <div className="m-2 text-3xl text-gray-600">Offsets bought</div>
-          <div className="text-6xl text-gray-600">
+        <div style={{ width: "24%" }}>
+          <div className="text-2xl text-gray-600">Offsets bought</div>
+          <div className="text-4xl text-gray-600">
             <b>{value}</b>
           </div>
         </div>
@@ -20,15 +20,13 @@ const OffsetsComponents = ({ imgSrc1, imgSrc2, value }) => {
           src={imgSrc1}
           alt="Village image"
           className="m-2 rounded-lg"
-          height={"24px"}
-          width={"196px"}
+          style={{ width: "24%", height: "96px" }}
         />
         <img
           src={imgSrc2}
           alt="Village image"
           className="m-2 rounded-lg"
-          height={"24px"}
-          width={"196px"}
+          style={{ width: "24%", height: "96px" }}
         />
       </div>
       <div className="flex flex-row justify-between">

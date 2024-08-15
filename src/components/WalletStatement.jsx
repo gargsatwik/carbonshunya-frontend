@@ -80,7 +80,7 @@ const WalletStatement = () => {
 
   return (
     <div
-      className="bg-white text-gray-600"
+      className="bg-white text-gray-600 border border-gray-300 rounded-lg"
       style={{ width: "100%", marginRight: "10%", marginLeft: "2%" }}
     >
       <div className="flex flex-row justify-between items-center text-center p-4">
