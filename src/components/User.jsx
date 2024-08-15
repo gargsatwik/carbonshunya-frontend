@@ -3,7 +3,7 @@ import fiveStarsImage from "../assets/ace_level_5.png";
 const User = ({ imgSrc, name, level }) => {
   return (
     <div
-      className="flex flex-col m-4 rounded-lg"
+      className="flex flex-col m-4 rounded-lg bg-white"
       style={{ width: "100%", height: "400px" }}
     >
       <div className="flex flex-col items-center justify-center text-center">

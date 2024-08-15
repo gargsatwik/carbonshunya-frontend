@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import CashTransactionComponent from "./CashTransactionComponent";
-
 const data = [
   {
     id: 1,
@@ -27,6 +24,9 @@ const data = [
     amount: 143,
   },
 ];
+
+import { useEffect, useState } from "react";
+import CashTransactionComponent from "./CashTransactionComponent";
 
 const WalletStatement = () => {
   // const [walletData, setWalletData] = useState([]);
@@ -75,12 +75,12 @@ const WalletStatement = () => {
   //   fetchWalletData();
   // }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div
-      className="bg-white"
+      className="bg-white text-gray-600"
       style={{ width: "100%", marginRight: "10%", marginLeft: "2%" }}
     >
       <div className="flex flex-row justify-between items-center text-center p-4">
@@ -95,8 +95,10 @@ const WalletStatement = () => {
         </div>
       </div>
       <hr />
-      <div className="flex flex-row justify-between p-4">
-        <div className="text-xl text-gray-600">LIFE Cash & Credits</div>
+      <div className="flex flex-row justify-between p-4 mb-5">
+        <div className="text-xl text-gray-600" style={{ width: "20%" }}>
+          LIFE Cash & Credits
+        </div>
         <div className="text-xl text-gray-600">Transaction</div>
         <div className="text-xl text-gray-600">Amount</div>
       </div>

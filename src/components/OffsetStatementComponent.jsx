@@ -48,7 +48,7 @@ const OffsetRow = ({ ruralfolkSupported, offsets, amount, project }) => {
 
 const OffsetStatement = () => {
   return (
-    <div className="mx-8 my-4">
+    <div className="mx-8 my-4 bg-white">
       <div className="flex justify-between items-center mb-6">
         <div className="text-4xl text-gray-600">Offset Statement</div>
         <button className="bg-gray-600 text-white rounded-md px-4 py-2">

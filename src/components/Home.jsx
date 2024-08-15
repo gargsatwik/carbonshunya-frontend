@@ -77,7 +77,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="flex flex-row mb-20" style={{ height: "40%" }}>
+      <div className="flex flex-row mb-20" style={{ height: "60%" }}>
         <div className="mr-16" style={{ width: "70%" }}>
           <WalletStatement />
         </div>

@@ -2,7 +2,7 @@ import offsetImage from "../assets/ic_offset_bought.png";
 
 const OffsetsComponents = ({ imgSrc1, imgSrc2, value }) => {
   return (
-    <div className="flex flex-col items-center justify-center text-center p-4">
+    <div className="flex flex-col items-center justify-center text-center p-4 bg-white">
       <div className="flex flew-row p-4">
         <img
           src={offsetImage}
